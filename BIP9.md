@@ -1,4 +1,4 @@
-# Activation using BIP 9
+# Activation using BIP&nbsp;9
 
 The proposal called "Version bits with timeout and delay" was made in the
 form of BIP&nbsp;9 some time ago and this is active on the network. To do a
@@ -17,7 +17,7 @@ Its basic properties are;
   network participants to upgrade their software.
 
 The BIP 9 solution was created for soft forks and as such has as goals that
-are not entirely in line with what most protocol upgrades want, it doesn't
-allow any flexibility in percentage of counting nor of the waiting period.
+are not entirely in line with what other protocol upgrades want, it doesn't
+allow any flexibility in activation support nor of the grace period.
 
 Please check the [alternative](BIP9-like.md) voting proposal as well!

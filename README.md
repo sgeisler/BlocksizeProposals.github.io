@@ -36,7 +36,7 @@ A limited flexibility solution, but easy because the code is already there.
 2. Signalling with [Block-Version-Bit](BIP9-like.md) (similar to BIP 9).  
 Expanding on (1), but allowing other than 95% voting threshold and other details.
 
-3. A chosen [block-height](BlockHeight.md).  
+3. A chosen [block-height](Blockheight.md).  
 This is by far the simplest technically, but it moves all negotiations off of the blockchain.
 
 4. [Dynamic block-height](DynamicBlockheight.md) by vote.  

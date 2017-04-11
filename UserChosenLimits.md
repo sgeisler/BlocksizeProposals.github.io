@@ -5,13 +5,13 @@ than 1&nbsp;MB (1,000,000&nbsp;bytes). This is a static limit.
 
 A pure user chosen limit
 changes the protocol to no longer have any direct limits. Indirectly there
-will be factors that limit blocks sending so it will never be unlimited.
+will still be factors that limit block transfer so it will never be unlimited.
 
-This proposal doesn't leave the system without any limits either, the block
+This proposal doesn't leave the system without any limits either. The block
 size is chosen by users in a way that essentially gives the miners almost
 complete control over the effective size limit.
 
-The properties of this limit are these;
+The properties of this proposal are these;
 
 * Block size limits are the minimum of what miners and economic majority
   configure their nodes to accept.
@@ -36,7 +36,7 @@ publish this value in mined blocks coinbase which is protected by
 proof-of-work from such Sybil attacks.
 
 In practice what will happen is that miners will ignore the announced values
-and instead have a conference or other methods to communicate with other
+and instead have a conference or other methods to communicate with many
 miners where they can decide about the when and how the block size limits
 should change.
 
