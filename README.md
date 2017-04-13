@@ -50,12 +50,16 @@ For fear of bad miners a 'sig-op' limit was introduced some years ago which need
 2. [Transaction-size](TransactionSize.md) limits.  
 Bigger transactions help some use-cases, but hurt others. A simple decision need to be made about the maximum size allowed.
 
-## Features to avoid
+# Features to avoid
 
-* Malleability
-* Quadratic Scaling
+* [Malleability / Quadratic Scaling](Malleability.md) fixes.  
+While this is a very popular topic, there is no need to make a block size upgrade more complex by adding more. We can do more fixes in the future.
 
 # Existing proposals
 
-* BIP100
-* BIP109
+| BIP  | Limits | Activation | Comment|
+| ---- | :-----:| :---------:| ------:|
+|BIP101| 2: dynamic | 2: BIP9-like | 8&nbsp;MB, doubles every year |
+|BIP102| 2: dynamic | 3: flag-day | 2&nbsp;MB |
+|BIP109| 1: static | 2: BIP9-like | 2&nbsp;MB, 750/1000 blocks plus 28 days |
+|EC (no BIP)| 3: user | none | |
