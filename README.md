@@ -62,5 +62,6 @@ While this is a very popular topic, there is no need to make a block size upgrad
 |BIP100| 2: dynamic | 2: BIP9-like | 5% change limit rule |
 |BIP101| 2: dynamic | 2: BIP9-like | 8&nbsp;MB, doubles every year |
 |BIP102| 2: dynamic | 3: flag-day | 2&nbsp;MB |
+|BIP103| 2: dynamic | 3: flag-day | 4.4% increase every 97 days |
 |BIP109| 1: static | 2: BIP9-like | 2&nbsp;MB, 750/1000 blocks plus 28 days |
 |EC (no BIP)| 3: user | none | |
