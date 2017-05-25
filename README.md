@@ -2,7 +2,7 @@
 
 Should you consider a protocol upgrade in Bitcoin that allows the coin to continue organic growth and more customers, then this is the right place to come to.
 
-Bitcoin requires a protocol upgrade (sometimes incorrectly called a hard fork) because of the 1&nbsp;MB-blocksize limit. Doing a simple protocol upgrade is easier said than done and we have seen a long list of suggested methods over the years.
+Bitcoin requires a protocol upgrade because of the 1&nbsp;MB-blocksize limit. Doing a simple protocol upgrade is easier said than done and we have seen a long list of suggested methods over the years.
 
 These pages will attempt to dissect the concepts and provide you with enough knowledge to know what it takes to do a good upgrade.
 
@@ -42,6 +42,14 @@ This is by far the simplest technically, but it moves all negotiations off of th
 4. [Dynamic block-height](DynamicBlockheight.md) by vote.  
 A combination of a simple solution, but with miners being able to support specific proposals.
 
+## Backwards compatibility
+
+1. Hard fork.
+This breaks backwards compatibility. Old nodes will not follow the new chain since it will look invalid to them.
+
+2. Soft fork
+This preserves backwards compatibility. Old nodes will follow the new chain if enough (>50%) miners support it, but they are not able to enforce the new rules.
+
 ## Other properties
 
 1. [SigOp](SigOpLimits.md) limits  
@@ -57,11 +65,11 @@ While this is a very popular topic, there is no need to make a block size upgrad
 
 # Existing proposals
 
-| BIP  | Limits | Activation | Comment|
-| ---- | :-----:| :---------:| ------:|
-|BIP100| 2: dynamic | 2: BIP9-like | 5% change limit rule |
-|BIP101| 2: dynamic | 2: BIP9-like | 8&nbsp;MB, doubles every year |
-|BIP102| 2: static | 3: flag-day | 2&nbsp;MB |
-|BIP103| 2: dynamic | 3: flag-day | 4.4% increase every 97 days |
-|BIP109| 1: static | 2: BIP9-like | 2&nbsp;MB, 750/1000 blocks plus 28 days |
-|EC (no BIP)| 3: user | none | |
+| BIP  | Limits | Activation | compatibility | Comment|
+| ---- | :-----:| :---------:| :------------:| ------:|
+|BIP100| 2: dynamic | 2: BIP9-like | Hard fork | 5% change limit rule |
+|BIP101| 2: dynamic | 2: BIP9-like | Hard fork | 8&nbsp;MB, doubles every year |
+|BIP102| 2: static | 3: flag-day | Hard fork | 2&nbsp;MB |
+|BIP103| 2: dynamic | 3: flag-day | Hard fork | 4.4% increase every 97 days |
+|BIP109| 1: static | 2: BIP9-like | Hard fork | 2&nbsp;MB, 750/1000 blocks plus 28 days |
+|EC (no BIP)| 3: user | none | Hard fork | |
