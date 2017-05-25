@@ -15,12 +15,27 @@
   </head>
   <body>
     <header>
-      <h1><a style="color: #EEEEEE;" href="/">{{ site.title | default: site.github.repository_name }}</a></h1>
-      <p>{{ site.description | default: site.github.project_tagline }}</p>
+      {% if page.url contains "-cn." %}
+      <h1><a style="color: #EEEEEE;" href="/README-cn">区块大小升级方案</a></h1>
+      <p>选择区块大小升级方案的指南</p>
+      {% else %}
+      <h1><a style="color: #EEEEEE;" href="/">Blocksize Proposals</a></h1>
+      <p>A guide to chosing your blocksize upgrade.</p>
+      {% endif %}
     </header>
     <div id="banner">
+      {% if page.url == "/README-cn.html" %}
+        <a href="/"><span class="fork" style="padding: 8px 10px 6px;border: 1px solid #dba500;"><img alt="English" src="/en.png"/></span></a>
+      {% elsif page.url contains "-cn.html" %}
+        <a href="{{page.url | remove: "-cn"}}"><span class="fork" style="padding: 8px 10px 6px;border: 1px solid #dba500;"><img alt="English" src="/en.png"/></span></a>
+        <a href="/README-cn" class="button"><strong>&lt;开始</strong></a>
+      {% elsif page.url == "/" %}
+        <a href="README-cn"><span class="fork" style="padding: 6px 10px 4px;border: 1px solid #dba500;"><img alt="中文" src="/cn.png"/></span></a>
+      {% else %}
+        <!-- a href="{{page.url | remove: ".html"}}-cn.html"><span class="fork" style="padding: 6px 10px 4px;border: 1px solid #dba500;"><img alt="中文" src="/cn.png"/></span></a -->
+        <a href="/" class="button"><strong>&lt;Start Page</strong></a>
+      {% endif %}
       <a href="{{ site.github.repository_url }}"><span id="logo"></span></a>
-      <a href="/" class="button"><strong>&lt; Start Page</strong></a>
     </div>
 
     <div class="wrapper">
@@ -36,5 +51,6 @@
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <!--{{ page.url }} -->
   </body>
 </html>
